@@ -1,10 +1,8 @@
 
 import React, { useState } from 'react';
-import { usePosterContext } from '../context/PosterContext';
 import SearchBar from './SearchBar';
 
 const Header: React.FC = () => {
-  const { toggleShowFavoritesOnly, showFavoritesOnly } = usePosterContext();
   const [searchOpen, setSearchOpen] = useState(false);
 
   return (
@@ -31,29 +29,7 @@ const Header: React.FC = () => {
           )}
         </div>
         
-        <div className="flex-1 flex justify-end">
-          <button
-            onClick={toggleShowFavoritesOnly}
-            className={`flex items-center transition-colors ${
-              showFavoritesOnly ? 'text-red-500' : 'text-gray-400 hover:text-white'
-            }`}
-          >
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="20" 
-              height="20" 
-              viewBox="0 0 24 24" 
-              fill={showFavoritesOnly ? "currentColor" : "none"} 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-            >
-              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-            </svg>
-            <span className="ml-2 hidden sm:inline">Favorites</span>
-          </button>
-        </div>
+        <div className="flex-1"></div>
       </div>
     </header>
   );
