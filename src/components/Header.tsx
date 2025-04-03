@@ -10,7 +10,11 @@ const Header: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 bg-poster/90 backdrop-blur-sm border-b border-poster-border py-4 px-6">
       <div className="flex items-center justify-between">
-        <div className="flex-1">
+        <h1 className="text-xl sm:text-2xl font-bold flex-1">
+          POSTER CHAMPION
+        </h1>
+        
+        <div className="flex-1 flex justify-center">
           {searchOpen ? (
             <SearchBar onClose={() => setSearchOpen(false)} />
           ) : (
@@ -26,10 +30,6 @@ const Header: React.FC = () => {
             </button>
           )}
         </div>
-        
-        <h1 className="text-xl sm:text-2xl font-bold text-center flex-1">
-          POSTER CHAMPION
-        </h1>
         
         <div className="flex-1 flex justify-end">
           <button
