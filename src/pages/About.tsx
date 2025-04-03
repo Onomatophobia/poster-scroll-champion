@@ -2,11 +2,18 @@
 import React from 'react';
 import Header from '../components/Header';
 import CategorySidebar from '../components/CategorySidebar';
+import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-poster text-white flex flex-col">
+      <SEO 
+        title="About Poster Champion - Our Story and Contact Information"
+        description="Learn about Poster Champion, how our poster collection works, and how to contact us."
+        keywords={['about', 'contact', 'poster collection', 'poster info', 'poster champion']}
+      />
+      
       <Header />
       
       <div className="flex flex-1">
