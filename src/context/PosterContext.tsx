@@ -14,7 +14,7 @@ interface PosterContextProps {
   setSearchQuery: (query: string) => void;
   selectCategory: (categoryId: string | null) => void;
   toggleFavorite: (posterId: string) => void;
-  isFavorite: (posterId: string) => void;
+  isFavorite: (posterId: string) => boolean; // Fixed return type from void to boolean
   showFavoritesOnly: boolean;
   toggleShowFavoritesOnly: () => void;
 }
