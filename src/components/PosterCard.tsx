@@ -24,7 +24,6 @@ const PosterCard: React.FC<PosterCardProps> = ({ poster }) => {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
             <h3 className="text-white font-bold text-lg mb-1">{poster.title}</h3>
-            <p className="text-white/80">${poster.price.toFixed(2)}</p>
           </div>
         </a>
       </div>
